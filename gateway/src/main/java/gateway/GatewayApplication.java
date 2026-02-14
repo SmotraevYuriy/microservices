@@ -14,6 +14,6 @@ public class GatewayApplication {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Gateway работает, авто";
+        return "Gateway работает, авторежим";
     }
 }
