@@ -13,21 +13,21 @@ pipeline {
                 stage('gateway') {
                     steps {
                         dir('gateway') {
-                            sh 'mvn -q package'
+                            bat 'mvn -q package'
                         }
                     }
                 }
                 stage('user-service') {
                     steps {
                         dir('userService') {
-                            sh 'mvn -q package'
+                            bat 'mvn -q package'
                         }
                     }
                 }
                 stage('orders-service') {
                     steps {
                         dir('ordersSrvice') {
-                            sh 'mvn -q package'
+                            bat 'mvn -q package'
                         }
                     }
                 }
@@ -36,14 +36,14 @@ pipeline {
 
         stage('Build Docker images') {
             steps {
-                sh 'docker-compose build'
+                bat 'docker-compose build'
             }
         }
 
         stage('Deploy') {
             steps {
-                sh 'docker-compose down'
-                sh 'docker-compose up -d'
+                bat 'docker-compose down'
+                bat 'docker-compose up -d'
             }
         }
     }
