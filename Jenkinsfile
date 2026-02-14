@@ -17,16 +17,16 @@ pipeline {
                         }
                     }
                 }
-                stage('users-service') {
+                stage('user-service') {
                     steps {
-                        dir('users-service') {
+                        dir('userService') {
                             sh 'mvn -q package'
                         }
                     }
                 }
                 stage('orders-service') {
                     steps {
-                        dir('orders-service') {
+                        dir('ordersSrvice') {
                             sh 'mvn -q package'
                         }
                     }
