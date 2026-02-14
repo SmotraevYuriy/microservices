@@ -1,0 +1,14 @@
+name: Trigger Jenkins
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Jenkins build
+        run: |
+          curl -X POST " https://stoppable-chadwick-subovoid.ngrok-free.dev/job/microservices/build?token=build"
