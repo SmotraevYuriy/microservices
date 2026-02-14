@@ -26,7 +26,7 @@ pipeline {
                 }
                 stage('orders-service') {
                     steps {
-                        dir('ordersSrvice') {
+                        dir('ordersService') {
                             bat 'mvn -q package'
                         }
                     }
