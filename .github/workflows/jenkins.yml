@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Trigger Jenkins build
         run: |
-          curl -X POST " https://stoppable-chadwick-subovoid.ngrok-free.dev/job/microservices/build?token=build"
+          curl -X POST "https://stoppable-chadwick-subovoid.ngrok-free.dev/job/microservices/build?token=build"
